@@ -72,6 +72,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
 
+const form = document.getElementById('contactForm');
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
 
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.innerHTML = `
+          <div style="text-align:center;padding:48px 0;">
+            <div style="font-size:48px;margin-bottom:16px;">✅</div>
+            <h3 style="font-family:var(--font-display);font-size:22px;margin-bottom:12px;">Message Sent!</h3>
+            <p style="color:var(--muted);">Thanks for reaching out. We'll be in touch within 1–2 business days.</p>
+          </div>`;
+      } else {
+        throw new Error('Failed');
+      }
+    } catch {
+      btn.textContent = 'Send Message ↗';
+      btn.disabled = false;
+      alert('Something went wrong. Please email us directly at sales@gitconsulting.com.au');
+    }
+  });
+}
 
 });
