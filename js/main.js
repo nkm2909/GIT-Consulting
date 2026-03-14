@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
 
   document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
-
+js
 const form = document.getElementById('contactForm');
 if (form) {
   form.addEventListener('submit', async (e) => {
