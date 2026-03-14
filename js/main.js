@@ -72,21 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
 
- // ── Contact form (static/mailto fallback) ─────────────────
-  //const form = document.getElementById('contactForm');
-  //if (form) {
-    //form.addEventListener('submit', e => {
-     // e.preventDefault();
-     // const name    = form.querySelector('[name="name"]')?.value || '';
-      //const email   = form.querySelector('[name="email"]')?.value || '';
-      //const company = form.querySelector('[name="company"]')?.value || '';
-     // const service = form.querySelector('[name="service"]')?.value || '';
-     // const message = form.querySelector('[name="message"]')?.value || '';
-     // const body    = encodeURIComponent(
-       // `Name: ${name}\nCompany: ${company}\nService Interest: ${service}\n\n${message}`
-     // );
-     // window.location.href = `mailto:sales@gitconsulting.com.au?subject=Enquiry from ${encodeURIComponent(name)}&body=${body}`;
-    //});
- // }***
+
 
 });
