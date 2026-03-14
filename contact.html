@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – GIT Consulting Pty Ltd</title>
+  <meta name="description" content="Get in touch with GIT Consulting Pty Ltd. We're based in Melbourne, Australia with a delivery centre in Pune, India." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230057FF'/><text y='.9em' font-size='55' font-family='Arial Black' fill='white' x='10' font-weight='900'>GIT</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-mark">GIT</div>
+        <div class="logo-text">GIT Consulting<span>Pty Ltd</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <span class="section-label">Contact Us</span>
+    <h1 class="section-title" style="max-width:600px;margin:0 auto 16px;">Let's Start a Conversation</h1>
+    <p class="section-sub" style="margin:0 auto;">Ready to transform your business? Reach out to our team and let's explore how we can help you achieve your goals.</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: Contact Info -->
+      <div>
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title" style="margin-bottom:32px;">We'd Love to Hear From You</h2>
+
+        <div class="contact-info-item fade-up">
+          <div class="contact-info-icon">📍</div>
+          <div class="contact-info-text">
+            <h4>Melbourne Office (HQ)</h4>
+            <p>750 Collins Street<br>Docklands VIC 3008<br>Melbourne, Australia</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item fade-up fade-up-delay-1">
+          <div class="contact-info-icon">📍</div>
+          <div class="contact-info-text">
+            <h4>Pune Delivery Centre</h4>
+            <p>Phase 3, Rajiv Gandhi Infotech Park<br>Hinjewadi, Pune<br>Maharashtra, India</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item fade-up fade-up-delay-2">
+          <div class="contact-info-icon">✉️</div>
+          <div class="contact-info-text">
+            <h4>Email Us</h4>
+            <a href="mailto:sales@gitconsulting.com.au">sales@gitconsulting.com.au</a>
+          </div>
+        </div>
+
+        <div class="contact-info-item fade-up fade-up-delay-3">
+          <div class="contact-info-icon">📞</div>
+          <div class="contact-info-text">
+            <h4>Call Us</h4>
+            <p>Australia: <a href="tel:+61466455500">+61 466 455 500</a></p>
+            <p>India: <a href="tel:+919538770005">+91 9538 770 005</a></p>
+          </div>
+        </div>
+
+        <div class="contact-info-item fade-up fade-up-delay-4">
+          <div class="contact-info-icon" style="font-size:18px;">in</div>
+          <div class="contact-info-text">
+            <h4>LinkedIn</h4>
+            <a href="https://in.linkedin.com/company/gitconsultingptyltd" target="_blank" rel="noopener">linkedin.com/company/gitconsultingptyltd</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="contact-form-card fade-up fade-up-delay-1">
+        <h3>Send Us a Message</h3>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Your Company Pty Ltd" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+61 4XX XXX XXX" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Interest</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option value="Cloud Solutions & Migration">Cloud Solutions &amp; Migration</option>
+              <option value="Data Analytics & AI">Data Analytics &amp; AI</option>
+              <option value="Custom Software Development">Custom Software Development</option>
+              <option value="Agile Development">Agile Development</option>
+              <option value="DevOps Integration">DevOps Integration</option>
+              <option value="Rapid Prototyping">Rapid Prototyping</option>
+              <option value="Security-First Development">Security-First Development</option>
+              <option value="Digital Transformation">Digital Transformation</option>
+              <option value="General Enquiry">General Enquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project, timeline, and any specific requirements..." required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send Message ↗</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex;">
+          <div class="logo-mark">GIT</div>
+          <div class="logo-text">GIT Consulting<span>Pty Ltd</span></div>
+        </a>
+        <p>An Australian services &amp; solutions company specialising in custom software development, cloud solutions, and digital transformation for Telecom and FinTech industries.</p>
+        <div class="footer-social">
+          <a href="https://in.linkedin.com/company/gitconsultingptyltd" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Cloud Solutions</a></li>
+          <li><a href="services.html">Data Analytics &amp; AI</a></li>
+          <li><a href="services.html">Custom Development</a></li>
+          <li><a href="services.html">DevOps Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><span class="icon">📍</span><span>750 Collins Street, Docklands 3008<br>Melbourne, Australia</span></div>
+        <div class="footer-contact-item"><span class="icon">✉️</span><a href="mailto:sales@gitconsulting.com.au">sales@gitconsulting.com.au</a></div>
+        <div class="footer-contact-item"><span class="icon">📞</span><span>AU: <a href="tel:+61466455500">+61 466 455 500</a></span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 GIT Consulting Pty Ltd. All Rights Reserved.</span>
+      <span>Melbourne, Australia</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
