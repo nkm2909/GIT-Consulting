@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us – GIT Consulting Pty Ltd</title>
-  <meta name="description" content="Get in touch with GIT Consulting Pty Ltd. We're based in Melbourne, Australia with a delivery centre in Pune, India." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230057FF'/><text y='.9em' font-size='55' font-family='Arial Black' fill='white' x='10' font-weight='900'>GIT</text></svg>" />
+  <meta name="description" content="Get in touch with GIT Consulting Pty Ltd. Headquartered in Melbourne, Australia with a delivery centre in Pune, India." />
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -13,10 +13,7 @@
 <nav id="navbar">
   <div class="container">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <div class="logo-mark">GIT</div>
-        <div class="logo-text">GIT Consulting<span>Pty Ltd</span></div>
-      </a>
+      <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="GIT Consulting Pty Ltd" /></a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -39,15 +36,14 @@
 </div>
 
 <main>
-
 <section>
   <div class="container">
     <div class="contact-grid">
 
-      <!-- Left: Contact Info -->
+      <!-- Left: Info -->
       <div>
         <span class="section-label">Get In Touch</span>
-        <h2 class="section-title" style="margin-bottom:32px;">We'd Love to Hear From You</h2>
+        <h2 class="section-title" style="margin-bottom:32px;">We'd Love to<br>Hear From You</h2>
 
         <div class="contact-info-item fade-up">
           <div class="contact-info-icon">📍</div>
@@ -83,7 +79,7 @@
         </div>
 
         <div class="contact-info-item fade-up fade-up-delay-4">
-          <div class="contact-info-icon" style="font-size:18px;">in</div>
+          <div class="contact-info-icon" style="font-size:18px;font-weight:700;">in</div>
           <div class="contact-info-text">
             <h4>LinkedIn</h4>
             <a href="https://in.linkedin.com/company/gitconsultingptyltd" target="_blank" rel="noopener">linkedin.com/company/gitconsultingptyltd</a>
@@ -91,11 +87,13 @@
         </div>
       </div>
 
-      <!-- Right: Contact Form -->
+      <!-- Right: Form -->
       <div class="contact-form-card fade-up fade-up-delay-1">
         <h3>Send Us a Message</h3>
 
- <form id="contactForm" action="https://formspree.io/f/maqpbkoz" method="POST">
+        <!-- action points to your Formspree endpoint; JS submits via fetch so no redirect occurs -->
+        <form id="contactForm" action="https://formspree.io/f/maqpbkoz" method="POST" novalidate>
+
           <div class="form-row">
             <div class="form-group">
               <label for="name">Full Name *</label>
@@ -122,8 +120,8 @@
             <label for="service">Service Interest</label>
             <select id="service" name="service">
               <option value="">Select a service...</option>
-              <option value="Cloud Solutions & Migration">Cloud Solutions &amp; Migration</option>
-              <option value="Data Analytics & AI">Data Analytics &amp; AI</option>
+              <option value="Cloud Solutions &amp; Migration">Cloud Solutions &amp; Migration</option>
+              <option value="Data Analytics &amp; AI">Data Analytics &amp; AI</option>
               <option value="Custom Software Development">Custom Software Development</option>
               <option value="Agile Development">Agile Development</option>
               <option value="DevOps Integration">DevOps Integration</option>
@@ -139,6 +137,9 @@
             <textarea id="message" name="message" placeholder="Tell us about your project, timeline, and any specific requirements..." required></textarea>
           </div>
 
+          <!-- Formspree honeypot spam filter -->
+          <input type="text" name="_gotcha" style="display:none" />
+
           <button type="submit" class="form-submit">Send Message ↗</button>
         </form>
       </div>
@@ -146,18 +147,14 @@
     </div>
   </div>
 </section>
-
 </main>
 
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="display:inline-flex;">
-          <div class="logo-mark">GIT</div>
-          <div class="logo-text">GIT Consulting<span>Pty Ltd</span></div>
-        </a>
-        <p>An Australian services &amp; solutions company specialising in custom software development, cloud solutions, and digital transformation for Telecom and FinTech industries.</p>
+        <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="GIT Consulting Pty Ltd" /></a>
+        <p>An Australian services &amp; solutions company specialising in custom software development, cloud solutions, and digital transformation — Energize IT Platform.</p>
         <div class="footer-social">
           <a href="https://in.linkedin.com/company/gitconsultingptyltd" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">in</a>
         </div>
@@ -191,11 +188,10 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 GIT Consulting Pty Ltd. All Rights Reserved.</span>
-      <span>Melbourne, Australia</span>
+      <span>Melbourne, Australia · Energize IT Platform</span>
     </div>
   </div>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>
