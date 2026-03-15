@@ -39,13 +39,83 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 nav,main,header,footer,section,.page-header{position:relative;z-index:1}
 
 /* ── NAV ── */
-#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:14px 0;transition:background var(--transition),padding var(--transition),box-shadow var(--transition)}
-#navbar.scrolled{background:rgba(6,13,31,0.96);backdrop-filter:blur(16px);padding:9px 0;box-shadow:0 2px 30px rgba(0,0,0,0.4)}
+#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:12px 0;transition:background var(--transition),padding var(--transition),box-shadow var(--transition)}
+#navbar.scrolled{background:rgba(6,13,31,0.96);backdrop-filter:blur(16px);padding:8px 0;box-shadow:0 2px 30px rgba(0,0,0,0.4)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.nav-logo{display:flex;align-items:center;flex-shrink:0}
-.nav-logo img{height:56px;width:auto;border-radius:50%;background:#fff;padding:3px;object-fit:contain;transition:opacity var(--transition),transform var(--transition);box-shadow:0 0 0 1.5px rgba(0,200,160,0.35)}
-.nav-logo img:hover{opacity:0.88;transform:scale(1.04)}
-footer .nav-logo img{height:64px;padding:5px}
+
+/* ── LOGO ── */
+.nav-logo{display:flex;align-items:center;gap:11px;flex-shrink:0;text-decoration:none}
+
+/* Spinning AI glow ring around logo image */
+.logo-img-wrap{position:relative;flex-shrink:0}
+.logo-img-wrap::before{
+  content:'';
+  position:absolute;
+  inset:-3px;
+  border-radius:50%;
+  background:conic-gradient(var(--teal),var(--purple),var(--blue),var(--teal));
+  animation:logoSpin 4s linear infinite;
+  z-index:0;
+}
+.logo-img-wrap::after{
+  content:'';
+  position:absolute;
+  inset:-3px;
+  border-radius:50%;
+  background:conic-gradient(var(--teal),var(--purple),var(--blue),var(--teal));
+  animation:logoSpin 4s linear infinite;
+  filter:blur(6px);
+  opacity:0.6;
+  z-index:0;
+}
+@keyframes logoSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.logo-img-wrap img{
+  position:relative;
+  z-index:1;
+  height:54px;width:54px;
+  border-radius:50%;
+  background:#fff;
+  padding:3px;
+  object-fit:contain;
+  display:block;
+  transition:transform var(--transition);
+}
+.nav-logo:hover .logo-img-wrap img{transform:scale(1.06)}
+
+/* Text block */
+.logo-text-block{display:flex;flex-direction:column;gap:1px}
+.logo-name{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:16px;
+  letter-spacing:-0.3px;
+  color:var(--white);
+  line-height:1.1;
+}
+.logo-tagline{
+  font-family:var(--font-display);
+  font-size:9.5px;
+  font-weight:700;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  background:linear-gradient(90deg,var(--teal),var(--purple),#a78bfa,var(--teal));
+  background-size:200% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:taglineShimmer 3s linear infinite;
+  line-height:1.2;
+}
+@keyframes taglineShimmer{
+  0%{background-position:0% center}
+  100%{background-position:200% center}
+}
+
+/* Footer logo — slightly larger */
+footer .nav-logo{gap:13px}
+footer .logo-img-wrap img{height:62px;width:62px;padding:4px}
+footer .logo-name{font-size:17px}
+footer .logo-tagline{font-size:10px}
 .nav-links{display:flex;align-items:center;list-style:none;gap:2px;flex-wrap:nowrap}
 .nav-links a{font-size:13px;font-weight:500;color:var(--muted);padding:7px 11px;border-radius:8px;transition:color var(--transition),background var(--transition);white-space:nowrap}
 .nav-links a:hover,.nav-links a.active{color:var(--white);background:rgba(0,87,255,0.12)}
@@ -330,5 +400,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:60p
   .cta-box{padding:44px 22px}
   .footer-grid{grid-template-columns:1fr;gap:28px}
   .footer-bottom{flex-direction:column;gap:10px;text-align:center}
-  .nav-logo img{height:48px}
+  .logo-img-wrap img{height:44px !important;width:44px !important}
+  .logo-name{font-size:13px}
+  .logo-tagline{font-size:8px}
 }
